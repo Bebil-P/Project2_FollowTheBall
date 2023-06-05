@@ -32,4 +32,5 @@ This project uses a differential drive robot using the URDF (Unified Robot Descr
    ```
 
 
-![image](https://udacity-reviews-uploads.s3.us-west-2.amazonaws.com/_attachments/452644/1657571318/Peek_2022-07-12_05-27.gif)
+
+![Peek_2022-07-12_05-27](https://github.com/Bebil-P/Project2_SimpleBallFollowingRobot_ROS/assets/109389468/5d691cf5-dab3-43c8-b3a7-ff8ffae44b4e)
