@@ -38,7 +38,7 @@ The robot has two sensors a lidar and a camera. Add Gazebo plugins for your robo
 
 The world.launch file launches the world with the white-colored ball and your robot.
 
-## Ball_chaser:
+## ball_chaser:
 This ROS package hold the drive_bot.cpp and process_image.cpp node. The drive_bot.cpp note request robot service to drive the robot by controlling its linear x and angular z velocities. The service publishes to the wheel joints and return back the requested velocities.
 The process_image C++ node reads the robot’s camera image, analyzes it to determine the presence and position of a white ball. If a white ball exists in the image, the node requests a service via a client to drive the robot towards it.
 The ball_chaser.launch file runs both the drive_bot and the process_image nodes.
