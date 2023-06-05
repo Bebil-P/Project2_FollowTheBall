@@ -23,7 +23,7 @@
 │   ├── srv                        # service folder for ROS services
 │   │   ├── DriveToTarget.srv
 │   ├── CMakeLists.txt             # compiler instructions
-│   ├── package.xml                # package info               
+│   ├── package.xml                # package info    
 
 
 ![image](https://udacity-reviews-uploads.s3.us-west-2.amazonaws.com/_attachments/452644/1657571318/Peek_2022-07-12_05-27.gif)
