@@ -2,7 +2,7 @@
 This project uses a differential drive robot built using URDF (Unified Robot Descriptio) file format and housed inside a Gazebo world.
 The project contain two C++ ROS nodes that interact with the robot and make it chase a white-colored ball. 
 
-##Directory structure 
+## Directory structure 
 ```
 .Project2                              # Simple Ball Following Robot in ROS
     ├── my_robot                       # my_robot package                   
