@@ -1,11 +1,10 @@
 # Project2_Simple Ball Following Robot in ROS.
-This project is a ball chasing robot that follows a white ball. 
-concepts and ideas coverd in this project are  ROS (Robot Operating System), write nodes, urdf files, and launch files.
-This project uses a differential drive robot using the URDF (Unified Robot Descriptio) format.
+This project uses a differential drive robot built using URDF (Unified Robot Descriptio) file format and housed inside a Gazebo world.
+The project contain two C++ ROS nodes that interact with the robot and make it chase a white-colored ball. 
 
- Directory structure 
+##Directory structure 
 ```
-.Project2                              # Go Chase It Project
+.Project2                              # Simple Ball Following Robot in ROS
     ├── my_robot                       # my_robot package                   
     │   ├── launch                     # launch folder for launch files   
     │   │   ├── robot_description.launch
