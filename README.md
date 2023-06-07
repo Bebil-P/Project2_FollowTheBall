@@ -38,11 +38,11 @@ The robot has two sensors a lidar and a camera. Add Gazebo plugins for your robo
 
 The world.launch file launches the world with the white-colored ball and your robot.
 Launching the world and the robot. 
-'''
+```
 $ cd /home/workspace/catkin_ws/ 
 $ source devel/setup.bash 
 $ roslaunch my_robot world.launch
-'''
+```
 
 ## ball_chaser:
 This ROS package hold the drive_bot.cpp and process_image.cpp node. The drive_bot.cpp note request robot service to drive the robot by controlling its linear x and angular z velocities. The service publishes to the wheel joints and return back the requested velocities.
