@@ -37,15 +37,43 @@ The my_robot ROS package holds the robot, the white ball, and the world.
 The robot has two sensors a lidar and a camera. Add Gazebo plugins for your robot’s differential drive, lidar, and camera. 
 
 The world.launch file launches the world with the white-colored ball and your robot.
-Launching the world and the robot. 
-```
-$ cd /home/workspace/catkin_ws/ 
-$ source devel/setup.bash 
-$ roslaunch my_robot world.launch
-```
+
 
 ## ball_chaser:
 This ROS package hold the drive_bot.cpp and process_image.cpp node. The drive_bot.cpp note request robot service to drive the robot by controlling its linear x and angular z velocities. The service publishes to the wheel joints and return back the requested velocities.
 The process_image C++ node reads the robot’s camera image, analyzes it to determine the presence and position of a white ball. If a white ball exists in the image, the node requests a service via a client to drive the robot towards it.
 The ball_chaser.launch file runs both the drive_bot and the process_image nodes.
 
+## Test Drive
+### 1 - Launching the robot inside the world . 
+```
+$ cd /home/workspace/catkin_ws/ 
+$ source devel/setup.bash 
+$ roslaunch my_robot world.launch
+```
+### 2- Run the drive_bot node 
+```
+$ cd /home/workspace/catkin_ws/ 
+$ source devel/setup.bash 
+$ rosrun ball_chaser drive_bot
+```
+### 3- Request a ball_chaser/command_robot service
+Test the service by requesting different sets of velocities from the terminal.
+Open a new terminal while all the nodes are running.
+
+```
+$ cd /home/workspace/catkin_ws/
+$ source devel/setup.bash 
+
+$ rosservice call /ball_chaser/command_robot "linear_x: 0.5 
+angular_z: 0.0" # This request should drive your robot forward 
+
+$ rosservice call /ball_chaser/command_robot "linear_x: 0.0 
+angular_z: 0.5" # This request should drive your robot left 
+
+$ rosservice call /ball_chaser/command_robot "linear_x: 0.0 
+angular_z: -0.5" # This request should drive your robot right 
+
+$ rosservice call /ball_chaser/command_robot "linear_x: 0.0 
+angular_z: 0.0" # This request should bring your robot to a complete stop
+```
